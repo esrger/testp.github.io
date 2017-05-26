@@ -1,0 +1,230 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  line-height: inherit !important;
+}
+.center-text {
+  text-align: center;
+}
+#nav-menu {
+  width: 100%;
+  font-family: monospace;
+  font-size: 24px;
+  z-index: 2;
+}
+.nav-menu-fixed {
+  position: fixed;
+  top: 0;
+}
+.nav-item {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 18px 0px;
+  border: 3px solid white;
+  border-left: none;
+  border-top: none;
+  text-align: center;
+  background-color: lightgray;
+}
+.nav-item:last-child {
+  border-right: none;
+}
+.nav-item:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+form.search-form {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -71.5px;
+  text-align: center;
+}
+form.search-form i {
+  font-size: 36px;
+  color: green;
+}
+form.search-form label.search-label {
+  display: block;
+  padding: 5px 0px;
+  color: gray;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 16px;
+}
+form.search-form input.search-input {
+  padding: 5px 9px 3px 9px;
+  font: 16px arial, sans-serif;
+  height: 26px;
+  line-height: 26px;
+  width: 70%;
+  max-width: 584px;
+  box-sizing: initial;
+}
+form.search-form input.search-submit {
+  display: block;
+  background: linear-gradient(to bottom, #f5f5f5, #f1f1f1);
+  margin: 9px auto;
+  border: 1px solid gray;
+  border-radius: 2px;
+  color: #757575;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 11px auto;
+  padding: 8px 16px;
+  text-align: center;
+  height: 36px;
+  line-height: 27px;
+  box-sizing: initial;
+}
+form.search-form input.search-submit:hover {
+  color: black;
+  border-color: black;
+  cursor: pointer;
+}
+@media (max-height: 300px) {
+  form.search-form {
+    position: static;
+    margin-top: 20px;
+  }
+}
+.footer {
+  position: fixed;
+  top: 100%;
+  width: 100%;
+  height: 50px;
+  margin-top: -50px;
+  line-height: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: georgia;
+  font-style: italic;
+}
+.footer-static {
+  position: static;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: georgia;
+  font-style: italic;
+  z-index: 5;
+}
+.title {
+  font-family: monospace;
+  margin: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+#container1 {
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+#container2 {
+  border-color: blue;
+  background-color: rgba(0, 0, 255, 0.5);
+}
+#container3 {
+  border-color: green;
+  background-color: rgba(0, 255, 0, 0.5);
+}
+.container {
+  display: inline-block;
+  text-align: center;
+  padding: 0px;
+  vertical-align: top;
+  box-sizing: border-box;
+  border: 12px;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  line-height: inherit;
+}
+.container .photo-container {
+  position: relative;
+  width: 95%;
+  margin: 10px auto;
+  overflow: hidden;
+}
+.container .photo-container .photo {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+.container .photo-container .favorite-overlay {
+  position: absolute;
+  top: -25%;
+  background-color: rgba(140, 140, 140, 0.7);
+  height: 25%;
+  width: 100%;
+  transition: top 0.3s;
+}
+.container .photo-container .favorite-overlay .table {
+  display: table;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.container .photo-container .favorite-overlay .table .favorite-label {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: arial;
+  font-size: 28px;
+}
+.container .photo-container .favorite-overlay .table .favorite-label .favorite-hover-label {
+  color: black;
+}
+.container .photo-container .favorite-overlay .table .favorite-label .favorite-hover-label .fa-heart-o {
+  display: inline;
+}
+.container .photo-container .favorite-overlay .table .favorite-label .favorite-hover-label .fa-heart {
+  display: none;
+}
+.container .photo-container .favorite-overlay .table .favorite-label .favorite-hover-label:hover {
+  color: red;
+  cursor: pointer;
+}
+.container .photo-container .favorite-overlay .table .favorite-label .favorite-hover-label:hover .fa-heart-o {
+  display: none;
+}
+.container .photo-container .favorite-overlay .table .favorite-label .favorite-hover-label:hover .fa-heart {
+  display: inline;
+}
+.container .photo-container:hover .favorite-overlay {
+  top: 0;
+  transition: top 1s;
+}
+
+.container .photo-container .open-modal-overlay {
+  position: absolute;
+  top: 90%;
+  background-color: rgba(140, 140, 140, 0.8);
+  height: 10%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.container .photo-container .open-modal-overlay .table {
+  display: table;
+  text-align: center;
+  vertical-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container .photo-container .open-modal-overlay .table .open-modal-label {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: arial;
+  font-size: 14px;
+  color: white;
+}

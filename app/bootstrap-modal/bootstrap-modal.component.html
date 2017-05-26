@@ -1,0 +1,7 @@
+<div bootstrapModal #bootstrapModal="bootstrapModal" (onHide)="onModalCloseStart()" (onHidden)="onModalClose(destroyComponent)" [config]="modalOptions" class="modal modal-display-block" tabindex="-1" role="dialog"[@modalState]="animationState">
+    <div class="modal-dialog">
+        <div class="modal-content">        
+            <template #modalContentComponent></template>
+        </div>
+    </div>
+</div>

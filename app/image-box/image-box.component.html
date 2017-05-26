@@ -1,0 +1,21 @@
+<div class="photo-container">
+	<div class="favorite-overlay" [hidden]="disableFavs" [style.top]="favoriteOverlayTop">
+		<div class="table">
+			<div class="favorite-label">
+				<div class="favorite-hover-label" favoriteImage (onFavored)="imageFavored()" [imageTitle]="title" [imageUrl]="src" [style.color]="favoriteLabelColor">
+					Favorite: 
+					<i class="fa fa-heart-o" [style.display]="displayEmptyHeartIcon"></i>
+					<i class="fa fa-heart" [style.display]="displayRedHeartIcon"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="open-modal-overlay" (click)="openModal()">
+		<div class="table">
+			<div class="open-modal-label">
+				Click to open modal!
+			</div>
+		</div>
+	</div>
+	<img class="photo" src="{{src}}" (click)="openModal()" />
+</div>

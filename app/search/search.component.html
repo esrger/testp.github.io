@@ -1,0 +1,6 @@
+<form class="search-form">
+	<label class="search-label">Search for Flickr Images:</label>
+	<input [(ngModel)]="searchString" name="search-input" type="text" class="search-input" />
+	<input (click)="search()" value="Flickr Search" readonly="readonly" class="search-submit" />
+	<div [hidden]="!searchInProgress"><i class="fa fa-refresh fa-spin"></i></div>
+</form>
